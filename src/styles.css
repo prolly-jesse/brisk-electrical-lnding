@@ -1,0 +1,182 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Brisk Electricals design system — Dark Slate & Glassmorphism
+ * with Electric Teal (tech) + Vibrant Amber (conversion) accents.
+ * All colors are oklch semantic tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: oklch(0.16 0.021 261);
+  --foreground: oklch(0.97 0.005 250);
+
+  --surface: oklch(0.215 0.026 259);
+  --surface-elevated: oklch(0.26 0.03 259);
+
+  --card: oklch(0.215 0.026 259);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.215 0.026 259);
+  --popover-foreground: oklch(0.97 0.005 250);
+
+  --primary: oklch(0.86 0.135 199);
+  --primary-foreground: oklch(0.17 0.03 250);
+  --primary-glow: oklch(0.73 0.13 245);
+
+  --secondary: oklch(0.26 0.03 259);
+  --secondary-foreground: oklch(0.97 0.005 250);
+
+  --muted: oklch(0.26 0.03 259);
+  --muted-foreground: oklch(0.71 0.028 256);
+
+  --accent: oklch(0.31 0.037 260);
+  --accent-foreground: oklch(0.97 0.005 250);
+
+  --cta: oklch(0.685 0.204 45);
+  --cta-foreground: oklch(0.16 0.02 60);
+
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+
+  --border: oklch(0.31 0.037 260);
+  --input: oklch(0.31 0.037 260);
+  --ring: oklch(0.86 0.135 199);
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--primary) 18%, transparent),
+    transparent 55%
+  );
+  --gradient-accent: linear-gradient(100deg, var(--primary), var(--primary-glow));
+  --gradient-cta: linear-gradient(
+    100deg,
+    var(--cta),
+    color-mix(in oklab, var(--cta) 70%, oklch(0.8 0.17 75))
+  );
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--primary) 30%, transparent),
+    0 18px 60px -22px color-mix(in oklab, var(--primary) 45%, transparent);
+  --shadow-cta: 0 14px 40px -14px color-mix(in oklab, var(--cta) 65%, transparent);
+  --shadow-card: 0 24px 60px -30px oklch(0 0 0 / 0.85);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@utility glass {
+  background-color: color-mix(in oklab, var(--surface) 78%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid color-mix(in oklab, var(--border) 90%, transparent);
+  box-shadow: var(--shadow-card);
+}
+
+@utility glass-hover {
+  transition: all 300ms ease;
+  &:hover {
+    border-color: color-mix(in oklab, var(--primary) 45%, transparent);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-3px);
+  }
+}
+
+@utility text-gradient-accent {
+  background-image: var(--gradient-accent);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility surface-grid {
+  background-image:
+    radial-gradient(
+      circle at 15% 10%,
+      color-mix(in oklab, var(--primary) 14%, transparent),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 0%,
+      color-mix(in oklab, var(--primary-glow) 12%, transparent),
+      transparent 42%
+    );
+}
+
+@utility marquee-track {
+  animation: brisk-marquee 26s linear infinite;
+}
+
+@keyframes brisk-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
