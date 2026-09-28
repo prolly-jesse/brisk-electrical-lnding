@@ -10,7 +10,7 @@ const PILLARS: ServicePillar[] = [
     tagline: "Certified wiring and safe power distribution for homes and new builds.",
     icon: "home",
     items: [
-      { name: "Full House Wiring (3-Bedroom)", price: "" },
+      { name: "Full House Wiring", price: "" },
       { name: "Domestic Electrical Panels (100A, Surge Protection)", price: "" },
       {
         name: "Outlets, Switches & Fault Diagnosis",
