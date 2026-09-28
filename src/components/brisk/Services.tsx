@@ -10,11 +10,11 @@ const PILLARS: ServicePillar[] = [
     tagline: "Certified wiring and safe power distribution for homes and new builds.",
     icon: "home",
     items: [
-      { name: "Full House Wiring (3-Bedroom)", price: "KSh 80,000 – KSh 250,000" },
-      { name: "Domestic Electrical Panels (100A, Surge Protection)", price: "KSh 15,000 – KSh 60,000" },
+      { name: "Full House Wiring (3-Bedroom)", price: "" },
+      { name: "Domestic Electrical Panels (100A, Surge Protection)", price: "" },
       {
         name: "Outlets, Switches & Fault Diagnosis",
-        price: "Call-out KSh 1,000 – KSh 2,500",
+        price: "",
         note: "Same-day response across Nairobi",
       },
     ],
@@ -25,9 +25,9 @@ const PILLARS: ServicePillar[] = [
     tagline: "App and voice control, surveillance and architectural lighting.",
     icon: "cpu",
     items: [
-      { name: "Smart Home Automation (Voice & App Control)", price: "KSh 30,000 – KSh 150,000+" },
-      { name: "CCTV & Alarm System Wiring", price: "KSh 10,000 – KSh 50,000" },
-      { name: "Custom Architectural & Landscape Lighting", price: "Quoted per design" },
+      { name: "Smart Home Automation (Voice & App Control)", price: "" },
+      { name: "CCTV & Alarm System Wiring", price: "" },
+      { name: "Custom Architectural & Landscape Lighting", price: "" },
     ],
   },
   {
@@ -36,9 +36,9 @@ const PILLARS: ServicePillar[] = [
     tagline: "Cut power bills with solar, LED retrofits and backup systems.",
     icon: "sun",
     items: [
-      { name: "Residential Solar Panel Systems", price: "From KSh 19,500 / panel" },
-      { name: "LED Retrofitting & Light Points", price: "KSh 500 – KSh 2,000 per point" },
-      { name: "Generator & Battery Backup Integrations", price: "Quoted per load audit" },
+      { name: "Residential Solar Panel Systems", price: "" },
+      { name: "LED Retrofitting & Light Points", price: "" },
+      { name: "Generator & Battery Backup Integrations", price: "" },
     ],
   },
 ];
@@ -54,10 +54,10 @@ export function Services() {
     <section id="services" className="py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="max-w-2xl text-3xl font-bold sm:text-4xl">
-          Core services with <span className="text-gradient-accent">real pricing ranges</span>
+          Core services for <span className="text-gradient-accent">homes & businesses</span>
         </h2>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Three service pillars, transparent rates, and EPRA-compliant workmanship on every job.
+          Three service pillars and EPRA-compliant workmanship on every job.
         </p>
 
         <div
@@ -111,10 +111,12 @@ export function Services() {
 
           <ul className="mt-6 grid gap-4 md:grid-cols-3">
             {pillar.items.map((item) => (
-              <li key={item.name} className="glass-hover rounded-2xl border border-border bg-background/50 p-5">
+              <li
+                key={item.name}
+                className="glass-hover rounded-2xl border border-border bg-background/50 p-5"
+              >
                 <Check className="size-5 text-primary" aria-hidden="true" />
                 <p className="mt-3 font-semibold leading-snug">{item.name}</p>
-                <p className="mt-2 font-display text-lg font-bold text-primary">{item.price}</p>
                 {item.note && <p className="mt-1 text-xs text-muted-foreground">{item.note}</p>}
               </li>
             ))}

@@ -39,7 +39,7 @@ function Index() {
         <Hero />
         <TrustBar />
         <Services />
-        <CostEstimator />
+
         <Testimonials />
         <WhyUs />
         <FAQ />

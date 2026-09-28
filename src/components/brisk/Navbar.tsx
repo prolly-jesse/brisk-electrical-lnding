@@ -4,7 +4,6 @@ import { whatsappLink } from "@/lib/brisk";
 
 const NAV = [
   { label: "Services", href: "#services" },
-  { label: "Pricing Estimator", href: "#estimator" },
   { label: "Projects", href: "#projects" },
   { label: "Why Us", href: "#why-us" },
 ];

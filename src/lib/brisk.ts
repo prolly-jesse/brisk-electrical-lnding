@@ -14,7 +14,10 @@ export function sanitizeText(value: string, maxLength = 500): string {
 }
 
 export function sanitizePhone(value: string, maxLength = 20): string {
-  return value.replace(/[^\d+\s-]/g, "").trim().slice(0, maxLength);
+  return value
+    .replace(/[^\d+\s-]/g, "")
+    .trim()
+    .slice(0, maxLength);
 }
 
 /** Builds a safe wa.me deep link with fully encoded text. */
@@ -37,7 +40,6 @@ export interface ServicePillar {
   title: string;
   tagline: string;
   icon: "home" | "cpu" | "sun";
-  items: ServiceItem[];
 }
 
 export interface Testimonial {

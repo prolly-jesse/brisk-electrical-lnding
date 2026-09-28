@@ -25,6 +25,7 @@ const SCALES = [
 ];
 
 export function CostEstimator() {
+  return null;
   const [state, setState] = useState<EstimatorState>({
     propertyType: PROPERTY_TYPES[0]!.id,
     service: SERVICES[0]!.id,
@@ -55,7 +56,8 @@ Estimated budget shown: ${formatKsh(low)} - ${formatKsh(high)}`;
           </span>
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Instant Project Cost Estimator</h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Pick your property, service and scale for an indicative budget range in Kenyan Shillings.
+            Pick your property, service and scale for an indicative budget range in Kenyan
+            Shillings.
           </p>
         </div>
 
@@ -131,10 +133,7 @@ Estimated budget shown: ${formatKsh(low)} - ${formatKsh(high)}`;
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               Estimated budget
             </p>
-            <p
-              aria-live="polite"
-              className="mt-2 font-display text-2xl font-bold sm:text-4xl"
-            >
+            <p aria-live="polite" className="mt-2 font-display text-2xl font-bold sm:text-4xl">
               {formatKsh(low)} <span className="text-muted-foreground">–</span> {formatKsh(high)}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">

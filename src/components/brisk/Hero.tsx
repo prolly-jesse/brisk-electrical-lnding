@@ -9,9 +9,7 @@ const BADGES = [
 ];
 
 export function Hero() {
-  const quote = whatsappLink(
-    "Hello Brisk Electricals, I'd like an instant quote. My project: ",
-  );
+  const quote = whatsappLink("Hello Brisk Electricals, I'd like an instant quote. My project: ");
 
   return (
     <section id="top" className="surface-grid relative overflow-hidden pt-28 lg:pt-36">
@@ -21,9 +19,8 @@ export function Hero() {
             Nairobi, Kenya
           </p>
           <h1 className="text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
-            EPRA-Licensed{" "}
-            <span className="text-gradient-accent">Electrical Contracting</span> &amp; Smart
-            Home Automation in Nairobi
+            EPRA-Licensed <span className="text-gradient-accent">Electrical Contracting</span> &amp;
+            Smart Home Automation in Nairobi
           </h1>
           <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
             From full residential wiring to smart home upgrades and solar integrations. Safe,
@@ -52,13 +49,6 @@ export function Hero() {
             >
               <MessageCircle className="size-5" aria-hidden="true" />
               Get Instant WhatsApp Quote
-            </a>
-            <a
-              href="#estimator"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl border border-primary/40 bg-primary/10 px-6 text-base font-bold text-primary transition-all duration-300 hover:bg-primary/20"
-            >
-              <Calculator className="size-5" aria-hidden="true" />
-              Calculate Project Cost
             </a>
           </div>
         </div>
