@@ -3,10 +3,10 @@ import { Navbar } from "@/components/brisk/Navbar";
 import { Hero } from "@/components/brisk/Hero";
 import { TrustBar } from "@/components/brisk/TrustBar";
 import { Services } from "@/components/brisk/Services";
-import { CostEstimator } from "@/components/brisk/CostEstimator";
+
 import { Testimonials } from "@/components/brisk/Testimonials";
 import { WhyUs } from "@/components/brisk/WhyUs";
-import { FAQ } from "@/components/brisk/FAQ";
+
 import { ContactSection } from "@/components/brisk/ContactSection";
 import { Footer } from "@/components/brisk/Footer";
 import { StickyWhatsApp } from "@/components/brisk/StickyWhatsApp";
@@ -42,7 +42,7 @@ function Index() {
 
         <Testimonials />
         <WhyUs />
-        <FAQ />
+
         <ContactSection />
       </main>
       <Footer />
