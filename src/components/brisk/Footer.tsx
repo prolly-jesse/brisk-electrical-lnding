@@ -22,8 +22,8 @@ export function Footer() {
             <p className="font-display text-lg font-bold">Brisk Electricals</p>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            EPRA-licensed electrical contracting, smart home automation and solar solutions for
-            Nairobi and neighbouring areas.
+            Wired for safety,Built on Trust.Approved electricians for electrical Work in Nairobi and
+            neighbouring areas.
           </p>
         </div>
 
@@ -110,7 +110,6 @@ export function Footer() {
               onLoad={() => setMapLoaded(true)}
             />
           </div>
-
         </div>
       </div>
 
@@ -122,5 +121,3 @@ export function Footer() {
     </footer>
   );
 }
-
-

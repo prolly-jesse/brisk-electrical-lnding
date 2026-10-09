@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-electrician.jpg";
 import { whatsappLink } from "@/lib/brisk";
 
 const BADGES = [
-  { icon: Zap, label: "EPRA Licensed & Compliant" },
+  { icon: Zap, label: "Licensed & Compliant" },
   { icon: ShieldCheck, label: "98% Client Satisfaction Rate" },
   { icon: Trophy, label: "5+ Years Technical Experience" },
 ];
@@ -19,8 +19,8 @@ export function Hero() {
             Nairobi, Kenya
           </p>
           <h1 className="text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
-            EPRA-Licensed <span className="text-gradient-accent">Electrical Contracting</span> &amp;
-            Smart Home Automation in Nairobi
+            Wired for safety,<span className="text-gradient-accent">Built on Trust.</span>
+            Approved electricians for electrical Work
           </h1>
           <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
             From full residential wiring to smart home upgrades and solar integrations. Safe,

@@ -1,19 +1,15 @@
 import { useState, type FormEvent } from "react";
 import { MessageCircle, PhoneCall } from "lucide-react";
-import {
-  PHONE_DISPLAY,
-  sanitizePhone,
-  sanitizeText,
-  whatsappLink,
-} from "@/lib/brisk";
+import { PHONE_DISPLAY, sanitizePhone, sanitizeText, whatsappLink } from "@/lib/brisk";
 
 const SERVICE_OPTIONS = [
-  "Full House Wiring",
-  "Panel Upgrade / Surge Protection",
-  "Smart Home Automation",
-  "CCTV & Alarm Wiring",
-  "Solar Installation",
-  "Fault Inspection & Repair",
+  "Instant Hot Showers",
+  "Electrical Fittings",
+  "Power Protection",
+  "Electrical Installations",
+  "Solar Installation & Repair",
+  "Electrical Maintenance & Repair",
+  "Others",
 ];
 
 interface FormState {
